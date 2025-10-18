@@ -1,3 +1,5 @@
+import { PROBAT_COMPONENTS } from "../../probat";
+import { withExperiment } from "../../probat";
 import React from 'react'
 
 const CallToAction: React.FC = () => {
@@ -155,3 +157,12 @@ const CallToAction: React.FC = () => {
 
 export default CallToAction
 
+const probatExperimentKey = "src/components/CallToAction.tsx";
+let Component = ComponentControl;
+if (PROBAT_COMPONENTS && probatExperimentKey in PROBAT_COMPONENTS) {
+  const proposalId = PROBAT_COMPONENTS[probatExperimentKey]?.proposalId;
+  if (proposalId) {
+    Component = withExperiment(ComponentControl, { proposalId });
+  }
+}
+export default Component;
