@@ -1,9 +1,8 @@
 import * as ReactProbat from "react";
-import type { ComponentType, MouseEventHandler } from "react";
+import type { ComponentType } from "react";
 
 ;(globalThis as any).__probatReact = (globalThis as any).__probatReact || ReactProbat;
 if (!(globalThis as any).React) (globalThis as any).React = ReactProbat;
-const { useEffect, useState } = ReactProbat;
 
 type VariantInfo = {
   experiment_id: string;
