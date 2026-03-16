@@ -10,8 +10,10 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
+    "@probat/react": "^0.4.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-jsx": "^5.1.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -26,4 +28,3 @@
     "vite": "^5.0.8"
   }
 }
-
